@@ -84,17 +84,17 @@
                 I also like listening to music, I guess. My favourite 3 albums all-time:
             </p>
             <ol>
-                <li>Bloom - Caligula's Horse</li>
-                <li>Restoration EP - Haken</li>
-                <li>Max & Match - LOONA/Odd Eye Circle</li>
+                <li><music-album>Bloom - Caligula's Horse</music-album></li>
+                <li><music-album>Restoration EP - Haken</music-album></li>
+                <li><music-album>Max & Match - LOONA/Odd Eye Circle</music-album></li>
             </ol>
             <p>
                 Recently, however, I've been enjoying these albums:
             </p>
             <ul>
-                <li>In Absentia - Porcupine Tree</li>
-                <li>Melt My Eyez See Your Future - Denzel Curry</li>
-                <li>Heavy Serenade - NMIXX</li>
+                <li><music-album>In Absentia - Porcupine Tree</music-album></li>
+                <li><music-album>Melt My Eyez See Your Future - Denzel Curry</music-album></li>
+                <li><music-album>Heavy Serenade - NMIXX</music-album></li>
             </ul>
 
         </section>
@@ -122,6 +122,19 @@
                 <p>Thanks for pressing me.</p>
                 <button>Close</button>
             </dialog>
+
+            <hello-world>
+
+            </hello-world>
+            <script>
+                <!--https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements-->
+                class HelloWorld extends HTMLElement {
+                    connectedCallback() {
+                        console.log("hello world");
+                    }
+                }
+                customElements.define("hello-world", HelloWorld);
+            </script>
 
         </section>
         <section>
@@ -153,8 +166,9 @@
             JavaScript disabled ... fun activities have also been disabled. 
         </p>
     </noscript>
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/footer -->
     <footer>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/footer -->
+
         <small>
             &copy; 2026 Matthew Chan (all rights reserved?)
         </small>
