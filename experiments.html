@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Website: experiments.html</title>
+	<link href="images/favicon.ico" rel="icon">
+
+</head>
+<body>
+    <header>
+        <a href="index.html">Go back home</a>
+    </header>
+    <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template-->
+    <!--Template for music score row. name, artist, score-->
+
+    <section>
+        <h2> music score row template</h2>
+        <template id="scorerow">
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+            </tr>
+        </template>
+        <p>
+            You probably can't see the template.
+        </p>
+    </section>
+
+    <!--Audio demonstration-->
+    <section>
+        <h2>Audio Tag Demo</h2>
+        <figure>
+            <figcaption>
+                Audio demonstration. This soundbyte was generated using
+                a local transformer-based model trained from scratch using
+                midi files. The output was a midi file, which was then converted into
+                a wav file using LMMS.
+            </figcaption>
+            <audio controls>
+                <source src="audio/jamb.wav"> 
+            </audio>
+        </figure>
+    </section>
+
+    <!--Video demonstration-->
+    <section>
+        <h2>Video + Source Demonstration</h2>
+        <figure>
+            <figcaption>Video + source demonstration: just recording the screen</figcaption>
+            <video controls>
+                <source src="video/demo_recording.mp4">
+                <p>hello</p>
+            </video>
+        </figure>
+    </section>
+
+    <section>
+        <h2>Canvas demo</h2>
+        <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/canvas-->
+        <canvas width="100" height="100">
+            ALT TEXT HERE!!!
+        </canvas>
+        <p>
+            All I'm saying is... ChatGPT could never produce a copyrighted mickey mouse.
+        </p>
+    </section>
+
+    <script>
+        <!--https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect -->
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "black";
+        
+        ctx.beginPath();
+        ctx.ellipse(50, 60, 40, 40, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.ellipse(20, 20, 20, 20, 0, 0, Math.PI * 2);
+        ctx.ellipse(80, 20, 20, 20, 0, 0, Math.PI * 2);
+        ctx.fill();
+        
+    </script>
+
+
+</body>
+</html>

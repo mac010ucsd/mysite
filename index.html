@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+	<link href="images/favicon.ico" rel="icon">
+    <style>
+        p {
+            border: 1px;
+            border-style: solid;
+        }
+        
+        h1 {
+            border: 1px;
+            border-style: solid;
+        }
+
+        h2 {
+            border: 1px;
+            border-style: solid;
+        }
+
+        h3 {
+            border: 1px;
+            border-style: solid;
+        }
+    </style>
+    <script> </script>
+
+</head>
+<body>
+    <header>
+        <h1>my site!</h1>
+        <!-- make this a horizontal navbar later... -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>
+                About me...
+            </h2>
+            <p>
+                Hey, I'm <span>Matthew</span>. I'm an M.S. Computer Engineering graduate student with interest
+                in <em>VLSI design</em> and <i>machine learning</i>. I'll be <strong>graduating</strong> after I pass <b>CSE 134B</b>!
+            </p>
+            <label for="progress-bar">My progress in CSE 134B:</label>
+            <progress id="progress-bar" value="2" max="5"></progress>
+
+            <div>
+                <picture>
+                    <img src="images/profile_image.jpg" alt="An image of Matthew Chan, standing in front of the LDS Church.">
+                </picture>
+            </div>
+            <!-- https://www.lipsum.com/feed/html -->
+            <p>
+                Imagine a brief summary of my resume: 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Pellentesque vehicula commodo sem sed molestie. Nam lobortis varius justo, 
+                sed faucibus lorem lobortis a. Donec iaculis venenatis metus, eu dignissim 
+                libero ullamcorper nec. Mauris sagittis ex in tellus commodo dictum. Aliquam 
+                sollicitudin, urna a varius gravida, tellus massa placerat metus, nec commodo 
+                justo magna ac diam. Mauris suscipit consectetur elementum. Morbi at commodo 
+                nulla. Ut est sapien, posuere non feugiat molestie, vestibulum ut nunc. Donec 
+                convallis bibendum arcu, vitae luctus quam egestas quis. Donec sed arcu lectus. 
+                Nunc ac nisi enim. Pellentesque lectus tortor, gravida ut mauris quis, porta 
+                fringilla sapien. Quisque imperdiet pharetra justo. 
+            </p>
+        </section>
+        <section>
+            <h2>Hobbies and such</h2>
+            <p>
+                I'm an avid Apex Legends player, and have been playing for UCSD Esports' Apex Legends team 2024-2026. 
+                We've done pretty well -- we've qualified for finals in our league (Octane Collegiate League) every season, 
+                but have forfeit our spot twice due to actually having UCSD finals during that timeslot. Last year, we went to
+                University of Cincinnati for LAN playoffs, which really was an awesome experience. 
+            </p>
+            <p>
+                I also like listening to music, I guess. My favourite 3 albums all-time:
+            </p>
+            <ol>
+                <li>Bloom - Caligula's Horse</li>
+                <li>Restoration EP - Haken</li>
+                <li>Max & Match - LOONA/Odd Eye Circle</li>
+            </ol>
+            <p>
+                Recently, however, I've been enjoying these albums:
+            </p>
+            <ul>
+                <li>In Absentia - Porcupine Tree</li>
+                <li>Melt My Eyez See Your Future - Denzel Curry</li>
+                <li>Heavy Serenade - NMIXX</li>
+            </ul>
+
+        </section>
+        <section>
+            <h2>
+                Little interactives:
+                <!--https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/d
+                https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/animateMotion-->
+            </h2>
+            <svg
+                stroke="red"
+                fill="yellow">
+                <polygon points="0,0 50,10 40,20 30,70">
+                    <animateMotion
+                        dur="2s"
+                        repeatCount="indefinite"
+                        path="M0,0 L40,40 10,10 50,20 Z"
+                    />
+                </polygon>
+            </svg>
+
+            <button>Press me!</button>
+            
+            <dialog id="dialog-box">
+                <p>Thanks for pressing me.</p>
+                <button>Close</button>
+            </dialog>
+
+        </section>
+        <section>
+            <h2>Mandatory form</h2>
+            <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset-->
+            <!-- the mdn page for fieldset uses this many divs themselves, so I'd think it to be fine.-->
+            <form>
+                <fieldset>
+                    <legend>Contact me!'</legend>
+                    <div>
+                        <label for="name-box">name:</label>
+                        <input type="text" id="name-box" name="name" placeholder="your name">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="message-box">message:</label>
+                        <textarea id="message-box" name="message" placeholder="please write me something nice"></textarea>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <noscript>
+        <p>
+            JavaScript disabled ... fun activities have also been disabled. 
+        </p>
+    </noscript>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/footer -->
+    <footer>
+        <small>
+            &copy; 2026 Matthew Chan (all rights reserved?)
+        </small>
+    </footer>
+</body>
+</html>
